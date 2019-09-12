@@ -2,7 +2,7 @@ require_relative "../piece"
 require "singleton"
 
 class NullPiece < Piece
-  include singleton
+  include Singleton
   
   def initialize
 
@@ -13,6 +13,6 @@ class NullPiece < Piece
   end
 
   def symbol
-
+    :N
   end
 end

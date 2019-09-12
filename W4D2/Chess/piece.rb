@@ -1,4 +1,9 @@
+require_relative "board"
+
+
 class Piece
+
+  attr_accessor :pos
 
   def initialize(color, board, pos)
     @color = color
@@ -7,7 +12,22 @@ class Piece
   end
 
   def to_s
-
+    case symbol
+    when :N
+      "   "
+    when :B
+      " B "  
+    when :R 
+      " R "
+    when :Kn
+      " Kn"
+    when :p 
+      " p "
+    when :K 
+      " K "
+    when :Q
+      " Q "
+    end
   end
 
   def empty?
@@ -15,10 +35,6 @@ class Piece
   end
 
   def valid_moves
-
-  end
-
-  def pos=(val)
 
   end
 
