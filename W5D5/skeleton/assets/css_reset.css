@@ -1,0 +1,15 @@
+html, body, section, article, ol, img {
+  margin: 0;
+  padding: 0;
+  border: 0;
+
+  font: inherit;
+  list-style: none;
+  line-height: inherit;
+  width: inherit
+}
+
+body {
+  line-height: 1.5px
+}
+
