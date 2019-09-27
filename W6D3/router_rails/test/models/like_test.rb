@@ -1,19 +1,18 @@
 # == Schema Information
 #
-# Table name: artworks
+# Table name: likes
 #
 #  id         :bigint           not null, primary key
-#  title      :string           not null
-#  image_url  :string           not null
-#  artist_id  :integer          not null
-#  favorite   :boolean
+#  user_id    :integer          not null
+#  liked_id   :integer
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
+#  liked_type :string
 #
 
 require 'test_helper'
 
-class ArtworkTest < ActiveSupport::TestCase
+class LikeTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
