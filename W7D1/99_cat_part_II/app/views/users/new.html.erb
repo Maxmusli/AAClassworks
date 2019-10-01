@@ -1,0 +1,18 @@
+<form action="<%= users_url %>" method="post">
+  <input type="hidden" name="authenticity_token" value="<%=form_authenticity_token%>">
+  <input type="hidden" name="_method" value="post">  <!-- maybe we don't need this hidden input-->
+  <ul>
+    <% @user.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+  </ul>
+  <label for="user_name">Username:
+    <input type="text" id="user_name" name="user[user_name]">  <!-- value? -->
+  </label>
+  <br>
+  <label for="password">Password:
+    <input type="password" id="password" name="user[password]">
+  </label>
+  <br>
+  <input type="submit" value="sign up">
+</form>
