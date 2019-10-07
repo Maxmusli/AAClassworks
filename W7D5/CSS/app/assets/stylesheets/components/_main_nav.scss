@@ -1,0 +1,58 @@
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px;
+}
+
+
+.left-nav > ul,
+.right-nav > ul {
+  display: flex;
+ 
+}
+
+.left-nav > ul > li {
+  display: flex;
+}
+
+.right-nav > ul > li {
+  display:flex;
+}
+
+.right-nav {
+  display: flex;
+  justify-content: center;
+  width: 400px;
+}
+
+.left-nav > ul {
+  display: flex;
+}
+
+
+.left-nav {
+  width: 150px;
+}
+
+.right-nav > ul > li:last-of-type {
+  display:flex;
+  align-items: center;
+}
+
+.cog_icon {
+  font-size: 20px;
+}
+
+.left-nav > ul > li:hover,
+.right-nav > ul > li:last-of-type:hover {
+
+}
+
+.left-nav span {
+
+}
+
+.right-nav i {
+  
+}
