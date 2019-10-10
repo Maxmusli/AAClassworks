@@ -1,0 +1,20 @@
+/* PHASE 4: Footer */
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 900px;
+  background-color: white;
+  min-height: 40px;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 10px;
+  color: grey;
+}
+
+footer ul {
+  display: flex;
+  width: 200px;
+  justify-content: space-evenly
+}
