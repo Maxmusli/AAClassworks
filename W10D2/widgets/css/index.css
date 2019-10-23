@@ -1,0 +1,40 @@
+#time {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border: solid black 1px;
+    background: linear-gradient(45deg, #dba013, #df2445);
+    color: white;
+    width: 50%;
+    margin: auto;
+}
+
+.time {
+    margin: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.date {
+    margin: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+}
+
+.tab {
+    border: solid black 1px;
+    width: 40px;
+
+    
+}
+
+.tab > header {
+    margin-left: 50%;
+}
+
+.tabInfo {
+    display: none;
+}
