@@ -1,8 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-export default ({ currentUser, logout }) => {
-  const display = (
+export default ({ currentUser, logout }) => {             // this is from container
+  // only show Sign Up and Log In button if user is not logged in
+  const display = currentUser ? (
+    <div>
+      <p>Hello, {currentUser.username}</p>
+      <button onClick={logout}>Logout</button>
+    </div>
+  ) : (
     <div>
       <Link className="btn" to="/signup">Sign Up</Link>
       <Link className="btn" to="/login">Log In</Link>

@@ -5,11 +5,11 @@ import Root from './components/root';
 
 document.addEventListener('DOMContentLoaded', () => {
   const root = document.getElementById('root');
-  let preloadedState = undefined;
+  let preloadedState = undefined; // create a variable to use
   if (window.currentUser) {
     preloadedState = {
       session: {
-        currentUser: window.currentUser
+        currentUser: window.currentUser // window.currentUser is from application.html.erb
       }
     };
   }
