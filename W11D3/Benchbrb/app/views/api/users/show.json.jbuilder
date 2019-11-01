@@ -1,1 +1,4 @@
-json.extract! @user, :id, :username, :session_token
+json.extract! @user, :id, :username
+
+# partial
+# json.partial! 'user', user: @user

@@ -9,7 +9,8 @@ class Api::UsersController < ApplicationController
   
     if @user.save
       login!(@user) 
-      render :show
+      # render :show
+      render '/api/users/show'
     else
       # Tell the user that something went wrong. Let them try again.
       # flash.now[:errors] = @user.errors.full_messages

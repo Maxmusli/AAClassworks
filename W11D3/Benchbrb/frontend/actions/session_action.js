@@ -1,4 +1,4 @@
-import { signup, login, logout} from '../util/session_api_util';
+import { postUser, postSession, deleteSession} from '../util/session_api_util';
 
 
 export const RECEIVE_CURRENT_USER = 'RECEIVE_CURRENT_USER';
@@ -26,14 +26,14 @@ const logoutCurrentUser = () => (
   }
 )
 
-export const createNewUser = formUser => dispatch => signup(formUser)
+export const createNewUser = formUser => dispatch => postUser(formUser)
     .then( user => dispatch(receiveCurrentUser(user)) )
     .fail( errors => dispatch(receiveSessionErrors(errors.respose.JSON)))
 
 
-export const loginUser = formUser => dispatch => login(formUser)
+export const login = formUser => dispatch => postSession(formUser)
     .then( user => dispatch(receiveCurrentUser(user)) )
     .fail( errors => dispatch(receiveSessionErrors(errors.respose.JSON)))
 
-export const logoutUser = () => dispatch => logout()
+export const logout = () => dispatch => deleteSession()
     .then( () => dispatch(logoutCurrentUser()) );

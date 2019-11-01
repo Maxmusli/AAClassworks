@@ -5,6 +5,7 @@ class ApplicationController < ActionController::Base
 
   def login!(user)
     # set the session_token for the connection to be the 
+    @current_user = user
     session[:session_token] = user.session_token
   end
 

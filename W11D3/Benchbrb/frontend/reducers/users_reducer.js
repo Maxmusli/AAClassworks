@@ -1,4 +1,4 @@
-import {RECEIVE_CURRENT_USER} from '../actions/session.action';
+import {RECEIVE_CURRENT_USER} from '../actions/session_action';
 
 
 export default (state = {}, action) => {
@@ -10,10 +10,8 @@ export default (state = {}, action) => {
           [action.user.id]: action.user
         }
       ))
-      
-      break;
   
     default:
-      break;
+      return state;
   }
 }
