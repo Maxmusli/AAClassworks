@@ -20,16 +20,17 @@ export default class SessionForm extends Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    const user = Object.assign({}, this.state);
-    this.props.processForm(user);
+    // const user = Object.assign({}, this.state);
+    this.props.processForm(this.state);
+      // .then(() => this.props.history.push('/'))
   }
 
   render() {
     const display = this.props.formType === 'login' ? (
       <div>
         <h1>Login</h1>
-        <Link to='/login'>Login</Link>
-        <form onSubmit={(e) => { this.handleSubmit(e) }}>
+        <Link to='/signup'>Sign Up</Link>
+        <form onSubmit={(e) => { this.handleSubmit(e) }}> {/* onSubmit={(e) => { this.handleSubmit(e) }} */}
           <label>Username:
             <input 
               type="text" 
@@ -45,13 +46,14 @@ export default class SessionForm extends Component {
             />
           </label><br/>
           <input type="submit" value="Login"/>
+          {/* <button onClick={this.handleSubmit}>Login</button> */}
         </form>
       </div>
     ) : (
       <div>
         <h1>Sign Up</h1>
-        <Link to='/signup'>Sign Up</Link>
-        <form onSubmit={(e) => { this.handleSubmit(e) }}>
+        <Link to='/login'>Login</Link>
+          <form onSubmit={(e) => { this.handleSubmit(e) }}> {/* onSubmit={(e) => { this.handleSubmit(e) }} */}
           <label>Username:
           <input
               type="text"
@@ -67,6 +69,7 @@ export default class SessionForm extends Component {
             />
           </label><br />
           <input type="submit" value="Sign Up" />
+          {/* <button onClick={this.handleSubmit}>Sign Up</button> */}
         </form>
       </div>
     )

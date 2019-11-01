@@ -31,9 +31,12 @@ export const createNewUser = formUser => dispatch => postUser(formUser)
     .fail( errors => dispatch(receiveSessionErrors(errors.respose.JSON)))
 
 
-export const login = formUser => dispatch => postSession(formUser)
+export const login = formUser => dispatch => {
+  // debugger
+  postSession(formUser)
     .then( user => dispatch(receiveCurrentUser(user)) )
     .fail( errors => dispatch(receiveSessionErrors(errors.respose.JSON)))
+}
 
 export const logout = () => dispatch => deleteSession()
     .then( () => dispatch(logoutCurrentUser()) );
